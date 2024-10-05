@@ -1,0 +1,130 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px 0;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Change color on hover */
+    background-color: #444; /* Background color on hover */
+}
+
+/* Hamburger menu styling */
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Sections styling */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    transition: background-color 0.5s;
+    box-sizing: border-box;
+}
+
+section#home.active {
+    background-color: #ffe4e1; /* Light pink */
+}
+
+section#about.active {
+    background-color: #e6e6fa; /* Lavender */
+}
+
+section#services.active {
+    background-color: #f0fff0; /* Honeydew */
+}
+
+section#contact.active {
+    background-color: #fafad2; /* Light Goldenrod Yellow */
+}
+
+#navbar.scrolled {
+    background-color: #222; /* Darker background when scrolled */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        width: 100%;
+    }
+
+    nav .hamburger {
+        display: flex;
+    }
+}
+
+
+
